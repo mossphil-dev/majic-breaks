@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Majic Breaks — Romantic, Rural Retreats</title>
+<title>Gallery — Majic Breaks</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Jost:wght@300;400&amp;display=swap" rel="stylesheet"/>
 <style>
@@ -934,7 +934,7 @@ a {
 
 </style>
 </head>
-<body class="page-home">
+<body class="page-gallery">
 <nav id="main-nav">
 <a class="nav-logo-wrap" href="index.html">
 <img alt="Majic Breaks Logo" class="nav-logo-img" data-logo="true" src="images/logo.png"/>
@@ -964,135 +964,40 @@ a {
 <button class="mobile-nav-book" onclick="closeMobileNav();window.location.href='contact.html'">Book a Stay</button>
 <p class="mobile-nav-tagline">Romantic, Rural Retreats</p>
 </nav>
-<section class="hero">
-<div class="hero-bg"></div>
-<div class="hero-texture"></div>
-<div class="hero-vignette"></div>
-<div class="heart-float" style="left:8%;font-size:1.2rem;">🤍</div>
-<div class="heart-float" style="left:22%;font-size:0.8rem;">🩷</div>
-<div class="heart-float" style="left:75%;font-size:1rem;">🤍</div>
-<div class="heart-float" style="left:88%;font-size:0.7rem;">🩷</div>
-<div class="heart-float" style="left:55%;font-size:0.9rem;">🤍</div>
-<div class="hero-logo">
-<img alt="Majic Breaks" data-logo="true" src="images/logo.png"/>
+<div class="page-hero">
+<div class="page-hero-bg bg-gallery"></div>
+<div class="page-hero-overlay"></div>
+<div class="page-hero-content">
+<p class="ph-label">Photo Gallery</p>
+<h1 class="ph-title">See the<br/><em>Magic</em></h1>
 </div>
-<p class="hero-eyebrow">Romantic · Rural · Retreats</p>
-<h1 class="hero-title"><em>Majic</em><br/>Breaks</h1>
-<p class="hero-tagline-line">Where love finds its quiet place</p>
-<p class="hero-sub">From a treehouse above an orchard to a cottage in the Kent hills — our own rural escapes, built and loved for couples who want to truly get away.</p>
-<div class="hero-cta">
-<a class="btn-primary" href="retreats.html">View Our Retreats</a>
-<a class="btn-outline-light" href="contact.html">Plan a Break</a>
 </div>
-<div class="hero-meadow">
-<svg preserveaspectratio="none" style="display:block" viewbox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg">
-<path d="M0,160 L0,100 Q120,60 240,90 Q360,120 480,80 Q600,40 720,70 Q840,100 960,75 Q1080,50 1200,85 Q1320,120 1440,95 L1440,160 Z" fill="rgba(244,239,230,0.12)"></path>
-<path d="M0,160 L0,120 Q180,80 360,110 Q540,140 720,105 Q900,70 1080,100 Q1260,130 1440,115 L1440,160 Z" fill="rgba(244,239,230,0.08)"></path>
-</svg>
+<div class="gallery-intro animate">
+<p class="section-label">In Pictures</p>
+<h2 class="section-title">A Glimpse of<br/>What Awaits</h2>
+<p class="section-body">From sunset views and outdoor baths to open fires and orchard mornings — here's a taste of what's waiting for you. Click any image to expand.</p>
 </div>
+<div class="gallery-grid">
+<div class="gallery-main-slot" id="gallery-main-slot">
+<span class="gallery-main-label" id="gallery-main-label"></span>
+</div>
+<div class="gallery-thumbs" id="gallery-thumbs"></div>
+</div>
+ Lightbox 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<span class="lb-close" onclick="closeLightbox()">×</span>
+<span class="lb-nav lb-prev" onclick="event.stopPropagation();lbNav(-1)">‹</span>
+<img alt="" id="lb-img" onclick="event.stopPropagation()" src=""/>
+<span class="lb-nav lb-next" onclick="event.stopPropagation();lbNav(1)">›</span>
+<span class="lb-caption" id="lb-caption"></span>
+</div>
+<section style="text-align:center;padding:4rem;background:var(--parchment)">
+<p class="section-label">Ready to Visit?</p>
+<h2 class="section-title" style="max-width:450px;margin:0 auto 1.2rem">The Real Thing is<br/>Even More Majical</h2>
+<p class="section-body" style="margin:0 auto 2rem;text-align:center">No photo can capture the scent of the orchard at dusk, or the sound of the countryside at night. Come and find it yourself.</p>
+<a class="btn-primary" href="contact.html">Plan Your Retreat</a>
 </section>
-<div class="intro-strip">
-<div class="intro-item animate">
-<div class="intro-icon">🌿</div>
-<h3>Genuinely Rural</h3>
-<p>Each retreat is our own — created, loved, and cared for with privacy and natural beauty at heart, from Cambridgeshire meadows to the Kent Hills.</p>
-</div>
-<div class="intro-item animate">
-<div class="intro-icon">🕯️</div>
-<h3>Made for Romance</h3>
-<p>Outdoor baths, fire pits, roll-top tubs, and sunrise views. Every detail is set up for couples, not just guests.</p>
-</div>
-<div class="intro-item animate">
-<div class="intro-icon">🥂</div>
-<h3>Unique Escapes</h3>
-<p>A treehouse above an orchard. A barn with a view. A cottage in an AONB. No two retreats are alike.</p>
-</div>
-</div>
-<section class="rooms-preview">
-<p class="section-label">Our Retreats</p>
-<h2 class="section-title">Four Places,<br/>One Purpose</h2>
-<p class="section-body">Each Majic Breaks property is owned, prepared, and personally cared for by us. Different settings, different experiences — all created to give you real time together.</p>
-<div class="rooms-preview-grid">
-<div class="room-preview-card animate" onclick="showPageAndScroll('rooms','room-orchards-nook')">
-<div class="rpc-visual"><div class="rpc-visual-inner" style="background:linear-gradient(145deg,#6b8a5e,#3d5c34)"><img alt="Orchard's Nook" src="images/orchards-nook/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/></div></div>
-<div class="rpc-body">
-<div class="rpc-location">Cottenham, Cambridgeshire</div>
-<div class="rpc-name">Orchard's Nook Treehouse</div>
-<div class="rpc-desc">A hand-built treehouse nestled in a private orchard. Rooftop outdoor bath, stunning sunsets, and stargazing on clear nights.</div>
-<div class="rpc-tags"><span class="rpc-tag">Sleeps 2</span><span class="rpc-tag">Rooftop Bath</span><span class="rpc-tag">9mi from Cambridge</span></div>
-<div class="rpc-price">From £100 <span>per night</span></div>
-</div>
-</div>
-<div class="room-preview-card animate" onclick="showPageAndScroll('rooms','room-cosy-hide')">
-<div class="rpc-visual"><div class="rpc-visual-inner" style="background:linear-gradient(145deg,#c4947a,#8a6040)"><img alt="The Cosy Hide" src="images/cosy-hide/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/></div></div>
-<div class="rpc-body">
-<div class="rpc-location">Cottenham, Cambridgeshire</div>
-<div class="rpc-name">The Cosy Hide</div>
-<div class="rpc-desc">A one-of-a-kind barn retreat with spectacular sunset views, a fire pit, and that rare feeling of being truly away from it all.</div>
-<div class="rpc-tags"><span class="rpc-tag">Sleeps 2</span><span class="rpc-tag">Dog Friendly</span><span class="rpc-tag">Fire Pit</span></div>
-<div class="rpc-price">From £80 <span>per night</span></div>
-</div>
-</div>
-<div class="room-preview-card animate" onclick="showPageAndScroll('rooms','room-cambs-cottage')">
-<div class="rpc-visual"><div class="rpc-visual-inner" style="background:linear-gradient(145deg,#8a7e6a,#5a4e3a)"><img alt="Cambridgeshire Cottage" src="images/cosy-cottage-camb/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/></div></div>
-<div class="rpc-body">
-<div class="rpc-location">Cottenham, Cambridgeshire</div>
-<div class="rpc-name">Cambridgeshire Cosy Cottage</div>
-<div class="rpc-desc">A charming rural cottage with an Aga, roll-top bath, wood burner, and horses in the field. Countryside life at its finest.</div>
-<div class="rpc-tags"><span class="rpc-tag">Sleeps 4</span><span class="rpc-tag">Roll-top Bath</span><span class="rpc-tag">Private Garden</span></div>
-<div class="rpc-price">From £160 <span>per night</span></div>
-</div>
-</div>
-<div class="room-preview-card animate" onclick="showPageAndScroll('rooms','room-kent-cottage')">
-<div class="rpc-visual"><div class="rpc-visual-inner" style="background:linear-gradient(145deg,#6b9e8a,#3d6e5a)"><img alt="Kent Cosy Cottage" src="images/cosy-cottage-kent/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/></div></div>
-<div class="rpc-body">
-<div class="rpc-location">Barham, Kent</div>
-<div class="rpc-name">Kent Cosy Cottage</div>
-<div class="rpc-desc">A beautiful cottage in an Area of Outstanding Natural Beauty — open fire, balcony sunrises, and Canterbury just 7 miles away.</div>
-<div class="rpc-tags"><span class="rpc-tag">Sleeps 4</span><span class="rpc-tag">Open Fire</span><span class="rpc-tag">AONB Views</span></div>
-<div class="rpc-price">From £150 <span>per night</span></div>
-</div>
-</div>
-</div>
-</section>
-<div class="promise">
-<div class="promise-visual">
-<img alt="Cosy outdoor seating at Majic Breaks" class="promise-image" src="images/cosyhide30.jpg"/>
-</div>
-<div class="promise-text">
-<span class="section-label">Our Promise</span>
-<h2>More Than a Stay — a Feeling</h2>
-<p class="promise-quote">
-      "Every couple deserves a place where time slows, the outside world fades, and only the two of you remain."
-    </p>
-<p>
-      Every Majic Breaks retreat is our own — prepared the way you’d set up your home for someone you love. 
-      Real countryside, real privacy, and the kind of details that turn a good stay into one you’ll talk about for years.
-    </p>
-<a class="btn-primary" href="about.html">Our Story</a>
-</div>
-</div>
-<section class="testimonials">
-<p class="section-label" style="color:var(--blush)">Loved by Couples</p>
-<h2 class="section-title" style="color:var(--white)">Guests Who Stayed,<br/>Then Came Back</h2>
-<div class="test-grid">
-<div class="test-card animate">
-<div class="test-stars">★★★★★</div>
-<p class="test-q">"The Orchard's Nook Treehouse is unlike anything we've stayed in. The rooftop bath at sunset was one of the most magical experiences of our relationship."</p>
-<span class="test-author">— Sophie &amp; Daniel, Yorkshire</span>
-</div>
-<div class="test-card animate">
-<div class="test-stars">★★★★★</div>
-<p class="test-q">"We stayed at the Kent Cosy Cottage for our anniversary. Waking up to those countryside views with a coffee by the open fire — perfect."</p>
-<span class="test-author">— Laura &amp; Marcus, London</span>
-</div>
-<div class="test-card animate">
-<div class="test-stars">★★★★★</div>
-<p class="test-q">"Third visit to the Cambridgeshire Cottage and it only gets better. The horses, the Aga breakfast, the roll-top bath. We're already booked for next year."</p>
-<span class="test-author">— Priya &amp; James, Birmingham</span>
-</div>
-</div>
-</section>
+
 <footer>
 <div class="footer-grid">
 <div>

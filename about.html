@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>About — Majic Breaks</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Jost:wght@300;400&amp;display=swap" rel="stylesheet"/>
 <style>
   :root {
     --cream:    #ebeae1;
@@ -940,11 +941,11 @@ a {
 <span class="nav-logo-text">Majic Breaks</span>
 </a>
 <ul class="nav-links">
-<li><a href="index.html" onclick="showPage('home')">Home</a></li>
-<li><a href="retreats.html" onclick="showPage('rooms')">Retreats</a></li>
-<li><a href="about.html" onclick="showPage('about')">About</a></li>
-<li><a href="gallery.html" onclick="showPage('gallery')">Gallery</a></li>
-<li><a href="contact.html" onclick="showPage('contact')">Contact</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="retreats.html">Retreats</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
 </ul>
 <button class="nav-book" onclick="window.location.href='contact.html'">Book a Stay</button>
 <button aria-label="Menu" class="burger" id="burger-btn" onclick="toggleMobileNav()">
@@ -963,7 +964,6 @@ a {
 <button class="mobile-nav-book" onclick="closeMobileNav();window.location.href='contact.html'">Book a Stay</button>
 <p class="mobile-nav-tagline">Romantic, Rural Retreats</p>
 </nav>
-
 <div class="page-hero">
 <div class="page-hero-bg bg-about"></div>
 <div class="page-hero-overlay"></div>
@@ -1011,28 +1011,12 @@ a {
 </div>
 </div>
 </div>
-<footer>
-<div class="footer-grid">
-<div>
-<div class="footer-logo-wrap">
-<img alt="Majic Breaks" class="footer-logo-img" data-logo="true" src="images/logo.png"/>
-<span class="footer-brand-name">Majic Breaks</span>
-</div>
-<p class="footer-tagline">Romantic, rural retreats.</p>
-</div>
-<div class="footer-cols-right">
-<div class="footer-col"><h4>Navigate</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('rooms')">Retreats</a></li><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('gallery')">Gallery</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
-<div class="footer-col"><h4>Get In Touch</h4><ul><li><a class="email-link" href="mailto:hello@majicbreaks.co.uk">hello@majicbreaks.co.uk</a></li><li><a href="tel:+441234567890">+44 1234 567 890</a></li></ul></div>
-</div>
-</div>
-<div class="footer-bottom"><span class="footer-copy">© 2025 Majic Breaks.</span></div>
-</footer>
 
 <footer>
 <div class="footer-grid">
 <div>
 <div class="footer-logo-wrap">
-<img alt="Majic Breaks" class="footer-logo-img" data-logo="true" src="images/cosy-hide9.jpg"/>
+<img alt="Majic Breaks" class="footer-logo-img" data-logo="true" src="images/logo.png"/>
 <span class="footer-brand-name">Majic Breaks</span>
 </div>
 <p class="footer-tagline">Romantic, rural retreats — because every love story deserves the perfect backdrop.</p>
@@ -1041,11 +1025,11 @@ a {
 <div class="footer-col">
 <h4>Navigate</h4>
 <ul>
-<li><a href="index.html" onclick="showPage('home')">Home</a></li>
-<li><a href="retreats.html" onclick="showPage('rooms')">Retreats</a></li>
-<li><a href="about.html" onclick="showPage('about')">About Us</a></li>
-<li><a href="gallery.html" onclick="showPage('gallery')">Gallery</a></li>
-<li><a href="contact.html" onclick="showPage('contact')">Contact</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="retreats.html">Retreats</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
 </ul>
 </div>
 <div class="footer-col">
@@ -1063,7 +1047,6 @@ a {
 <span class="footer-copy">Romantic, Rural Retreats</span>
 </div>
 </footer>
-
 <script>
   function showPageAndScroll(pageId, anchorId) {
     const map = {
@@ -1308,12 +1291,8 @@ a {
     else btn.classList.remove('visible');
   });
 </script>
-
-
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/447771872979"
-   target="_blank"
-   style="
+<a href="https://wa.me/447771872979" style="
    position:fixed;
    bottom:20px;
    left:20px;
@@ -1325,12 +1304,10 @@ a {
    text-decoration:none;
    box-shadow:0 4px 12px rgba(0,0,0,0.2);
    z-index:9999;
-   font-family:sans-serif;">
+   font-family:sans-serif;" target="_blank">
    💬 WhatsApp
 </a>
-
 <!-- Back to Top Button -->
 <div class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'});">↑</div>
-
 </body>
 </html>
