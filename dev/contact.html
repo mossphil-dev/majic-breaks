@@ -999,18 +999,20 @@ a {
 <div class="contact-right animate">
 <h2 class="form-title">Make an Enquiry</h2>
 <p class="form-sub">Tell us about your ideal stay and we'll come back to you within 24 hours.</p>
+<form action="https://formspree.io/f/xgorawqz" method="POST">
+<input type="hidden" name="_subject" value="New Majic Breaks Enquiry"/>
 <div class="form-row">
-<div class="f-group"><label>First Name</label><input placeholder="Your first name" type="text"/></div>
-<div class="f-group"><label>Last Name</label><input placeholder="Your last name" type="text"/></div>
+<div class="f-group"><label>First Name</label><input name="first_name" placeholder="Your first name" type="text" required/></div>
+<div class="f-group"><label>Last Name</label><input name="last_name" placeholder="Your last name" type="text" required/></div>
 </div>
-<div class="f-group"><label>Email</label><input placeholder="your@email.com" type="email"/></div>
+<div class="f-group"><label>Email</label><input name="email" placeholder="your@email.com" type="email" required/></div>
 <div class="form-row">
-<div class="f-group"><label>Check-in</label><input type="date"/></div>
-<div class="f-group"><label>Check-out</label><input type="date"/></div>
+<div class="f-group"><label>Check-in</label><input name="check_in" type="date"/></div>
+<div class="f-group"><label>Check-out</label><input name="check_out" type="date"/></div>
 </div>
 <div class="f-group">
 <label>Retreat Preference</label>
-<select>
+<select name="retreat">
 <option value="">Select a retreat…</option>
 <option>Orchard's Nook Treehouse — Cambridgeshire (sleeps 2)</option>
 <option>The Cosy Hide — Cambridgeshire (sleeps 2, dog friendly)</option>
@@ -1021,9 +1023,10 @@ a {
 </div>
 <div class="f-group">
 <label>Special Occasion or Requests</label>
-<textarea placeholder="Anniversary, proposal, bringing a dog, dietary needs, late arrival — anything we should know…"></textarea>
+<textarea name="message" placeholder="Anniversary, proposal, bringing a dog, dietary needs, late arrival — anything we should know…"></textarea>
 </div>
-<button class="btn-primary" onclick="handleSubmit()" style="width:100%;padding:1rem">Send Enquiry</button>
+<button class="btn-primary" type="submit" style="width:100%;padding:1rem">Send Enquiry</button>
+</form>
 <p style="font-size:0.74rem;color:var(--bark);margin-top:0.8rem;text-align:center">No payment required at this stage. We'll confirm availability by email.</p>
 </div>
 </div>
