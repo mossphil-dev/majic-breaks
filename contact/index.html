@@ -90,7 +90,7 @@
   }
   .hero-bg {
     position:absolute; inset:0;
-    background-image: url('images/cosyhide17.jpg');
+    background-image: url('../images/cosyhide17.jpg');
     background-size:cover; background-position:center 40%;
   }
   .hero-bg::after {
@@ -825,25 +825,25 @@
 
 
 .bg-rooms {
-  background-image: url('images/retreats-hero.jpg');
+  background-image: url('../images/retreats-hero.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .bg-about {
-  background-image: url('images/about-hero.jpg');
+  background-image: url('../images/about-hero.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .bg-contact {
-  background-image: url('images/contact-hero.jpg');
+  background-image: url('../images/contact-hero.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .bg-gallery {
-  background-image: url('images/gallery-hero.jpg');
+  background-image: url('../images/gallery-hero.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -937,18 +937,18 @@ a {
 </head>
 <body class="page-contact">
 <nav id="main-nav">
-<a class="nav-logo-wrap" href="index.html">
-<img alt="Majic Breaks Logo" class="nav-logo-img" data-logo="true" src="images/logo.png"/>
+<a class="nav-logo-wrap" href="/">
+<img alt="Majic Breaks Logo" class="nav-logo-img" data-logo="true" src="../images/logo.png"/>
 <span class="nav-logo-text">Majic Breaks</span>
 </a>
 <ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="retreats.html">Retreats</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/retreats/">Retreats</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/gallery/">Gallery</a></li>
+<li><a href="/contact/">Contact</a></li>
 </ul>
-<button class="nav-book" onclick="window.location.href='contact.html'">Book a Stay</button>
+<button class="nav-book" onclick="window.location.href='/contact/'">Book a Stay</button>
 <button aria-label="Menu" class="burger" id="burger-btn" onclick="toggleMobileNav()">
 <span></span><span></span><span></span>
 </button>
@@ -956,13 +956,13 @@ a {
 <div class="nav-overlay" id="nav-overlay" onclick="closeMobileNav()"></div>
 <nav class="mobile-nav" id="mobile-nav">
 <ul>
-<li><a href="index.html" onclick="closeMobileNav()">Home</a></li>
-<li><a href="retreats.html" onclick="closeMobileNav()">Retreats</a></li>
-<li><a href="about.html" onclick="closeMobileNav()">About</a></li>
-<li><a href="gallery.html" onclick="closeMobileNav()">Gallery</a></li>
-<li><a href="contact.html" onclick="closeMobileNav()">Contact</a></li>
+<li><a href="/" onclick="closeMobileNav()">Home</a></li>
+<li><a href="/retreats/" onclick="closeMobileNav()">Retreats</a></li>
+<li><a href="/about/" onclick="closeMobileNav()">About</a></li>
+<li><a href="/gallery/" onclick="closeMobileNav()">Gallery</a></li>
+<li><a href="/contact/" onclick="closeMobileNav()">Contact</a></li>
 </ul>
-<button class="mobile-nav-book" onclick="closeMobileNav();window.location.href='contact.html'">Book a Stay</button>
+<button class="mobile-nav-book" onclick="closeMobileNav();window.location.href='/contact/'">Book a Stay</button>
 <p class="mobile-nav-tagline">Romantic, Rural Retreats</p>
 </nav>
 <div class="page-hero">
@@ -1039,7 +1039,7 @@ a {
 <div class="footer-grid">
 <div>
 <div class="footer-logo-wrap">
-<img alt="Majic Breaks" class="footer-logo-img" data-logo="true" src="images/logo.png"/>
+<img alt="Majic Breaks" class="footer-logo-img" data-logo="true" src="../images/logo.png"/>
 <span class="footer-brand-name">Majic Breaks</span>
 </div>
 <p class="footer-tagline">Romantic, rural retreats — because every love story deserves the perfect backdrop.</p>
@@ -1048,11 +1048,11 @@ a {
 <div class="footer-col">
 <h4>Navigate</h4>
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="retreats.html">Retreats</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/retreats/">Retreats</a></li>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/gallery/">Gallery</a></li>
+<li><a href="/contact/">Contact</a></li>
 </ul>
 </div>
 <div class="footer-col">
@@ -1072,13 +1072,13 @@ a {
 <script>
   function showPageAndScroll(pageId, anchorId) {
     const map = {
-      home: 'index.html',
-      rooms: 'retreats.html',
-      about: 'about.html',
-      gallery: 'gallery.html',
-      contact: 'contact.html'
+      home: '/',
+      rooms: '/retreats/',
+      about: '/about/',
+      gallery: '/gallery/',
+      contact: '/contact/'
     };
-    window.location.href = (map[pageId] || 'index.html') + (anchorId ? ('#' + anchorId) : '');
+    window.location.href = (map[pageId] || '/') + (anchorId ? ('#' + anchorId) : '');
   }
 
   const observer = new IntersectionObserver(entries => {
@@ -1182,10 +1182,10 @@ a {
 
   (function buildGallery() {
     var prefixes = [
-      { p: 'images/orchards-nook', label: "Orchard's Nook" },
-      { p: 'images/cosy-hide', label: 'The Cosy Hide' },
-      { p: 'images/cosy-cottage-camb', label: 'Cambridgeshire Cottage' },
-      { p: 'images/cosy-cottage-kent', label: 'Kent Cottage' }
+      { p: '../images/orchards-nook', label: "Orchard's Nook" },
+      { p: '../images/cosy-hide', label: 'The Cosy Hide' },
+      { p: '../images/cosy-cottage-camb', label: 'Cambridgeshire Cottage' },
+      { p: '../images/cosy-cottage-kent', label: 'Kent Cottage' }
     ];
     prefixes.forEach(function(r) {
       galleryImages.push({ src: r.p + '/main.jpg', label: r.label });
@@ -1218,10 +1218,10 @@ a {
       if (galleryImages.length) setGalleryMain(0);
     }
 
-    populateRoomGallery('r1', 'images/orchards-nook', "Orchards Nook Treehouse", 12);
-    populateRoomGallery('r2', 'images/cosy-hide', "The Cosy Hide", 12);
-    populateRoomGallery('r3', 'images/cosy-cottage-camb', "Cambridgeshire Cosy Cottage", 12);
-    populateRoomGallery('r4', 'images/cosy-cottage-kent', "Kent Cosy Cottage", 12);
+    populateRoomGallery('r1', '../images/orchards-nook', "Orchards Nook Treehouse", 12);
+    populateRoomGallery('r2', '../images/cosy-hide', "The Cosy Hide", 12);
+    populateRoomGallery('r3', '../images/cosy-cottage-camb', "Cambridgeshire Cosy Cottage", 12);
+    populateRoomGallery('r4', '../images/cosy-cottage-kent', "Kent Cosy Cottage", 12);
   });
 
   function setGalleryMain(idx) {

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Retreats — Majic Breaks</title>
+<title>Gallery — Majic Breaks</title>
 <link rel="icon" type="image/png" href="images/logo.png">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Jost:wght@300;400&amp;display=swap" rel="stylesheet"/>
@@ -90,7 +90,7 @@
   }
   .hero-bg {
     position:absolute; inset:0;
-    background-image: url('images/cosyhide17.jpg');
+    background-image: url('../images/cosyhide17.jpg');
     background-size:cover; background-position:center 40%;
   }
   .hero-bg::after {
@@ -825,25 +825,25 @@
 
 
 .bg-rooms {
-  background-image: url('images/retreats-hero.jpg');
+  background-image: url('../images/retreats-hero.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .bg-about {
-  background-image: url('images/about-hero.jpg');
+  background-image: url('../images/about-hero.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .bg-contact {
-  background-image: url('images/contact-hero.jpg');
+  background-image: url('../images/contact-hero.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .bg-gallery {
-  background-image: url('images/gallery-hero.jpg');
+  background-image: url('../images/gallery-hero.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -935,20 +935,20 @@ a {
 
 </style>
 </head>
-<body class="page-rooms">
+<body class="page-gallery">
 <nav id="main-nav">
-<a class="nav-logo-wrap" href="index.html">
-<img alt="Majic Breaks Logo" class="nav-logo-img" data-logo="true" src="images/logo.png"/>
+<a class="nav-logo-wrap" href="/">
+<img alt="Majic Breaks Logo" class="nav-logo-img" data-logo="true" src="../images/logo.png"/>
 <span class="nav-logo-text">Majic Breaks</span>
 </a>
 <ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="retreats.html">Retreats</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/retreats/">Retreats</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/gallery/">Gallery</a></li>
+<li><a href="/contact/">Contact</a></li>
 </ul>
-<button class="nav-book" onclick="window.location.href='contact.html'">Book a Stay</button>
+<button class="nav-book" onclick="window.location.href='/contact/'">Book a Stay</button>
 <button aria-label="Menu" class="burger" id="burger-btn" onclick="toggleMobileNav()">
 <span></span><span></span><span></span>
 </button>
@@ -956,145 +956,54 @@ a {
 <div class="nav-overlay" id="nav-overlay" onclick="closeMobileNav()"></div>
 <nav class="mobile-nav" id="mobile-nav">
 <ul>
-<li><a href="index.html" onclick="closeMobileNav()">Home</a></li>
-<li><a href="retreats.html" onclick="closeMobileNav()">Retreats</a></li>
-<li><a href="about.html" onclick="closeMobileNav()">About</a></li>
-<li><a href="gallery.html" onclick="closeMobileNav()">Gallery</a></li>
-<li><a href="contact.html" onclick="closeMobileNav()">Contact</a></li>
+<li><a href="/" onclick="closeMobileNav()">Home</a></li>
+<li><a href="/retreats/" onclick="closeMobileNav()">Retreats</a></li>
+<li><a href="/about/" onclick="closeMobileNav()">About</a></li>
+<li><a href="/gallery/" onclick="closeMobileNav()">Gallery</a></li>
+<li><a href="/contact/" onclick="closeMobileNav()">Contact</a></li>
 </ul>
-<button class="mobile-nav-book" onclick="closeMobileNav();window.location.href='contact.html'">Book a Stay</button>
+<button class="mobile-nav-book" onclick="closeMobileNav();window.location.href='/contact/'">Book a Stay</button>
 <p class="mobile-nav-tagline">Romantic, Rural Retreats</p>
 </nav>
 <div class="page-hero">
-<div class="page-hero-bg bg-rooms"></div>
+<div class="page-hero-bg bg-gallery"></div>
 <div class="page-hero-overlay"></div>
 <div class="page-hero-content">
-<p class="ph-label">Our Retreats</p>
-<h1 class="ph-title">Four Unique<br/><em>Escapes</em></h1>
+<p class="ph-label">Photo Gallery</p>
+<h1 class="ph-title">See the<br/><em>Majic</em></h1>
 </div>
 </div>
-<div class="rooms-list">
-<!-- ORCHARDS NOOK TREEHOUSE -->
-<div class="room-row animate" id="room-orchards-nook">
-<div class="room-img-wrap">
-<div class="room-img-main" id="r1-main" onclick="roomLightbox(this.querySelector('img').src,'Orchards Nook Treehouse')">
-<img alt="Orchards Nook Treehouse" src="images/orchards-nook/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+<div class="gallery-intro animate">
+<p class="section-label">In Pictures</p>
+<h2 class="section-title">A Glimpse of<br/>What Awaits</h2>
+<p class="section-body">From sunset views and outdoor baths to open fires and orchard mornings — here's a taste of what's waiting for you. Click any image to expand.</p>
 </div>
-<div class="room-thumbs" id="r1-thumbs"></div>
+<div class="gallery-grid">
+<div class="gallery-main-slot" id="gallery-main-slot">
+<span class="gallery-main-label" id="gallery-main-label"></span>
 </div>
-<div>
-<p class="r-label">Treehouse · Sleeps 2 · Cottenham, Cambridgeshire</p>
-<h2 class="r-name">Orchards Nook Treehouse</h2>
-<p class="r-location">📍 9 miles from Cambridge city centre</p>
-<p class="r-desc">A unique and lovingly built treehouse nestled within a small private orchard on a picturesque 10-acre plot. Designed around an actual tree, it combines rustic charm with modern comforts — a hand-built king-size bed, modern shower room, and kitchenette inside, with a decked garden area and a secluded rooftop space complete with outdoor bath and seating outside.</p>
-<p class="r-desc">The grounds are home to four resident horses, two friendly dogs, and a wealth of wildlife — hares, deer, badgers, and red kites overhead. Guests are welcome to greet the horses and treat them to a carrot.</p>
-<div class="amenities">
-<span class="am">King Bed (hand-built)</span>
-<span class="am">Rooftop Outdoor Bath</span>
-<span class="am">Outdoor Deck</span>
-<span class="am">Modern Shower Room</span>
-<span class="am">Kitchenette</span>
-<span class="am">Private Garden</span>
-<span class="am">On-site Parking</span>
-<span class="am">Horses &amp; Wildlife</span>
+<div class="gallery-thumbs" id="gallery-thumbs"></div>
 </div>
-<p class="r-sleeps">Sleeps <strong>2</strong> · Adults only · No pets</p>
-<div class="r-price">From £150 <span>per night</span></div>
-<a class="btn-primary" href="contact.html">Enquire About This Retreat</a>
+ Lightbox 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<span class="lb-close" onclick="closeLightbox()">×</span>
+<span class="lb-nav lb-prev" onclick="event.stopPropagation();lbNav(-1)">‹</span>
+<img alt="" id="lb-img" onclick="event.stopPropagation()" src=""/>
+<span class="lb-nav lb-next" onclick="event.stopPropagation();lbNav(1)">›</span>
+<span class="lb-caption" id="lb-caption"></span>
 </div>
-</div>
-<!-- THE COSY HIDE -->
-<div class="room-row animate" id="room-cosy-hide">
-<div class="room-img-wrap">
-<div class="room-img-main" id="r2-main" onclick="roomLightbox(this.querySelector('img').src,'The Cosy Hide')">
-<img alt="The Cosy Hide" src="images/cosy-hide/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
-</div>
-<div class="room-thumbs" id="r2-thumbs"></div>
-</div>
-<div>
-<p class="r-label">Barn Retreat · Sleeps 2 · Cottenham, Cambridgeshire</p>
-<h2 class="r-name">The Cosy Hide</h2>
-<p class="r-location">📍 15–20 minutes from Cambridge · 15 mins walk to Great River Ouse</p>
-<p class="r-desc">A caravan with a big difference — set inside a barn with the most spectacular sunset views across open Cambridgeshire countryside. It has a generous inside/outside area, perfect for dining and relaxing, plus a large outdoor space complete with a fire pit and grill. Truly one of a kind.</p>
-<p class="r-desc">It's perfect for a romantic getaway, and you're welcome to bring a small dog along to share in the peace and tranquillity.</p>
-<div class="amenities">
-<span class="am">Barn Setting</span>
-<span class="am">Sunset Views</span>
-<span class="am">Fire Pit &amp; Grill</span>
-<span class="am">Inside/Outside Living</span>
-<span class="am">On-site Parking</span>
-<span class="am">Dog Friendly (small)</span>
-</div>
-<p class="r-sleeps">Sleeps <strong>2</strong> · Small dogs welcome (£20 per stay) · Owners on-site nearby</p>
-<div class="r-price">From £90 <span>per night</span></div>
-<a class="btn-primary" href="contact.html">Enquire About This Retreat</a>
-</div>
-</div>
-<!-- CAMBS COTTAGE -->
-<div class="room-row animate" id="room-cambs-cottage">
-<div class="room-img-wrap">
-<div class="room-img-main" id="r3-main" onclick="roomLightbox(this.querySelector('img').src,'Cambridgeshire Cosy Cottage')">
-<img alt="Cambridgeshire Cosy Cottage" src="images/cosy-cottage-camb/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
-</div>
-<div class="room-thumbs" id="r3-thumbs"></div>
-</div>
-<div>
-<p class="r-label">Cottage · Sleeps 4 · Cottenham, Cambridgeshire</p>
-<h2 class="r-name">Cambridgeshire Cosy Cottage</h2>
-<p class="r-location">📍 9 miles from Cambridge · Close to Ely · Great River Ouse nearby</p>
-<p class="r-desc">Nestled on a picturesque 10-acre plot in rural Cottenham, this beautifully equipped cottage is the perfect escape for those wanting genuine countryside peace within easy reach of Cambridge.</p>
-<p class="r-desc">Upstairs there are two roomy bedrooms — a twin and a king with a hand-crafted bed — plus an upstairs bathroom with a roll-top bath and separate shower. Downstairs, the fully equipped kitchen features an Aga stove, a separate lounge with wood burner, and French doors onto a private garden.</p>
-<div class="amenities">
-<span class="am">King Bed (hand-crafted)</span>
-<span class="am">Roll-top Bath</span>
-<span class="am">Aga Stove</span>
-<span class="am">Wood Burner</span>
-<span class="am">Private Garden</span>
-<span class="am">French Doors</span>
-<span class="am">Secure Parking</span>
-<span class="am">Horses &amp; Wildlife</span>
-</div>
-<p class="r-sleeps">Sleeps <strong>4</strong> (2 bedrooms) · Owners in separate annexe nearby</p>
-<div class="r-price">From £130 <span>per night</span></div>
-<a class="btn-primary" href="contact.html">Enquire About This Retreat</a>
-</div>
-</div>
-<!-- KENT COTTAGE -->
-<div class="room-row animate" id="room-kent-cottage">
-<div class="room-img-wrap">
-<div class="room-img-main" id="r4-main" onclick="roomLightbox(this.querySelector('img').src,'Kent Cosy Cottage')">
-<img alt="Kent Cosy Cottage" src="images/cosy-cottage-kent/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
-</div>
-<div class="room-thumbs" id="r4-thumbs"></div>
-</div>
-<div>
-<p class="r-label">Cottage · Sleeps 4 · Barham, Kent</p>
-<h2 class="r-name">Kent Cosy Cottage</h2>
-<p class="r-location">📍 Area of Outstanding Natural Beauty · Canterbury 7 miles · Dover 14 miles</p>
-<p class="r-desc">Set on the outskirts of the picturesque village of Barham within an Area of Outstanding Natural Beauty, this delightful home offers breath-taking, far-reaching views across miles of stunning countryside.</p>
-<p class="r-desc">Arranged over three floors, the top floor has a double bedroom with en-suite shower room and Velux views; the middle floor has a king bedroom next to the modern bathroom. Downstairs, a cosy living room with open fire and kitchen/diner with bifold doors opening onto a balcony.</p>
-<div class="amenities">
-<span class="am">King Bed</span>
-<span class="am">Stand-alone Bath</span>
-<span class="am">Open Fire</span>
-<span class="am">Balcony</span>
-<span class="am">Bifold Kitchen Doors</span>
-<span class="am">100ft Back Garden</span>
-<span class="am">Fire Pit</span>
-<span class="am">Private Parking (2 cars)</span>
-</div>
-<p class="r-sleeps">Sleeps <strong>4</strong> (2 bedrooms) · Short walk to village pub &amp; amenities</p>
-<div class="r-price">From £135 <span>per night</span></div>
-<a class="btn-primary" href="contact.html">Enquire About This Retreat</a>
-</div>
-</div>
-</div>
+<section style="text-align:center;padding:4rem;background:var(--parchment)">
+<p class="section-label">Ready to Visit?</p>
+<h2 class="section-title" style="max-width:450px;margin:0 auto 1.2rem">The Real Thing is<br/>Even More Majical</h2>
+<p class="section-body" style="margin:0 auto 2rem;text-align:center">No photo can capture the scent of the orchard at dusk, or the sound of the countryside at night. Come and find it yourself.</p>
+<a class="btn-primary" href="/contact/">Plan Your Retreat</a>
+</section>
 
 <footer>
 <div class="footer-grid">
 <div>
 <div class="footer-logo-wrap">
-<img alt="Majic Breaks" class="footer-logo-img" data-logo="true" src="images/logo.png"/>
+<img alt="Majic Breaks" class="footer-logo-img" data-logo="true" src="../images/logo.png"/>
 <span class="footer-brand-name">Majic Breaks</span>
 </div>
 <p class="footer-tagline">Romantic, rural retreats — because every love story deserves the perfect backdrop.</p>
@@ -1103,11 +1012,11 @@ a {
 <div class="footer-col">
 <h4>Navigate</h4>
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="retreats.html">Retreats</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/retreats/">Retreats</a></li>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/gallery/">Gallery</a></li>
+<li><a href="/contact/">Contact</a></li>
 </ul>
 </div>
 <div class="footer-col">
@@ -1127,13 +1036,13 @@ a {
 <script>
   function showPageAndScroll(pageId, anchorId) {
     const map = {
-      home: 'index.html',
-      rooms: 'retreats.html',
-      about: 'about.html',
-      gallery: 'gallery.html',
-      contact: 'contact.html'
+      home: '/',
+      rooms: '/retreats/',
+      about: '/about/',
+      gallery: '/gallery/',
+      contact: '/contact/'
     };
-    window.location.href = (map[pageId] || 'index.html') + (anchorId ? ('#' + anchorId) : '');
+    window.location.href = (map[pageId] || '/') + (anchorId ? ('#' + anchorId) : '');
   }
 
   const observer = new IntersectionObserver(entries => {
@@ -1213,10 +1122,10 @@ a {
 
   (function buildGallery() {
     var prefixes = [
-      { p: 'images/orchards-nook', label: "Orchard's Nook" },
-      { p: 'images/cosy-hide', label: 'The Cosy Hide' },
-      { p: 'images/cosy-cottage-camb', label: 'Cambridgeshire Cottage' },
-      { p: 'images/cosy-cottage-kent', label: 'Kent Cottage' }
+      { p: '../images/orchards-nook', label: "Orchard's Nook" },
+      { p: '../images/cosy-hide', label: 'The Cosy Hide' },
+      { p: '../images/cosy-cottage-camb', label: 'Cambridgeshire Cottage' },
+      { p: '../images/cosy-cottage-kent', label: 'Kent Cottage' }
     ];
     prefixes.forEach(function(r) {
       galleryImages.push({ src: r.p + '/main.jpg', label: r.label });
@@ -1249,10 +1158,10 @@ a {
       if (galleryImages.length) setGalleryMain(0);
     }
 
-    populateRoomGallery('r1', 'images/orchards-nook', "Orchards Nook Treehouse", 12);
-    populateRoomGallery('r2', 'images/cosy-hide', "The Cosy Hide", 12);
-    populateRoomGallery('r3', 'images/cosy-cottage-camb', "Cambridgeshire Cosy Cottage", 12);
-    populateRoomGallery('r4', 'images/cosy-cottage-kent', "Kent Cosy Cottage", 12);
+    populateRoomGallery('r1', '../images/orchards-nook', "Orchards Nook Treehouse", 12);
+    populateRoomGallery('r2', '../images/cosy-hide', "The Cosy Hide", 12);
+    populateRoomGallery('r3', '../images/cosy-cottage-camb', "Cambridgeshire Cosy Cottage", 12);
+    populateRoomGallery('r4', '../images/cosy-cottage-kent', "Kent Cosy Cottage", 12);
   });
 
   function setGalleryMain(idx) {

@@ -942,18 +942,18 @@ a {
 </head>
 <body class="page-home">
 <nav id="main-nav">
-<a class="nav-logo-wrap" href="index.html">
+<a class="nav-logo-wrap" href="/">
 <img alt="Majic Breaks Logo" class="nav-logo-img" data-logo="true" src="images/logo.png"/>
 <span class="nav-logo-text">Majic Breaks</span>
 </a>
 <ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="retreats.html">Retreats</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/retreats/">Retreats</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/gallery/">Gallery</a></li>
+<li><a href="/contact/">Contact</a></li>
 </ul>
-<button class="nav-book" onclick="window.location.href='contact.html'">Book a Stay</button>
+<button class="nav-book" onclick="window.location.href='/contact/'">Book a Stay</button>
 <button aria-label="Menu" class="burger" id="burger-btn" onclick="toggleMobileNav()">
 <span></span><span></span><span></span>
 </button>
@@ -961,13 +961,13 @@ a {
 <div class="nav-overlay" id="nav-overlay" onclick="closeMobileNav()"></div>
 <nav class="mobile-nav" id="mobile-nav">
 <ul>
-<li><a href="index.html" onclick="closeMobileNav()">Home</a></li>
-<li><a href="retreats.html" onclick="closeMobileNav()">Retreats</a></li>
-<li><a href="about.html" onclick="closeMobileNav()">About</a></li>
-<li><a href="gallery.html" onclick="closeMobileNav()">Gallery</a></li>
-<li><a href="contact.html" onclick="closeMobileNav()">Contact</a></li>
+<li><a href="/" onclick="closeMobileNav()">Home</a></li>
+<li><a href="/retreats/" onclick="closeMobileNav()">Retreats</a></li>
+<li><a href="/about/" onclick="closeMobileNav()">About</a></li>
+<li><a href="/gallery/" onclick="closeMobileNav()">Gallery</a></li>
+<li><a href="/contact/" onclick="closeMobileNav()">Contact</a></li>
 </ul>
-<button class="mobile-nav-book" onclick="closeMobileNav();window.location.href='contact.html'">Book a Stay</button>
+<button class="mobile-nav-book" onclick="closeMobileNav();window.location.href='/contact/'">Book a Stay</button>
 <p class="mobile-nav-tagline">Romantic, Rural Retreats</p>
 </nav>
 <section class="hero">
@@ -987,8 +987,8 @@ a {
 <p class="hero-tagline-line">Where love finds its quiet place</p>
 <p class="hero-sub">From a treehouse above an orchard to a cottage in the Kent hills — our own rural escapes, built and loved for couples who want to truly get away.</p>
 <div class="hero-cta">
-<a class="btn-primary" href="retreats.html">View Our Retreats</a>
-<a class="btn-outline-light" href="contact.html">Plan a Break</a>
+<a class="btn-primary" href="/retreats/">View Our Retreats</a>
+<a class="btn-outline-light" href="/contact/">Plan a Break</a>
 </div>
 <div class="hero-meadow">
 <svg preserveaspectratio="none" style="display:block" viewbox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg">
@@ -1075,7 +1075,7 @@ a {
       Every Majic Breaks retreat is our own — prepared the way you’d set up your home for someone you love. 
       Real countryside, real privacy, and the kind of details that turn a good stay into one you’ll talk about for years.
     </p>
-<a class="btn-primary" href="about.html">Our Story</a>
+<a class="btn-primary" href="/about/">Our Story</a>
 </div>
 </div>
 <section class="testimonials">
@@ -1112,11 +1112,11 @@ a {
 <div class="footer-col">
 <h4>Navigate</h4>
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="retreats.html">Retreats</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/retreats/">Retreats</a></li>
+<li><a href="/about/">About Us</a></li>
+<li><a href="/gallery/">Gallery</a></li>
+<li><a href="/contact/">Contact</a></li>
 </ul>
 </div>
 <div class="footer-col">
@@ -1136,13 +1136,13 @@ a {
 <script>
   function showPageAndScroll(pageId, anchorId) {
     const map = {
-      home: 'index.html',
-      rooms: 'retreats.html',
-      about: 'about.html',
-      gallery: 'gallery.html',
-      contact: 'contact.html'
+      home: '/',
+      rooms: '/retreats/',
+      about: '/about/',
+      gallery: '/gallery/',
+      contact: '/contact/'
     };
-    window.location.href = (map[pageId] || 'index.html') + (anchorId ? ('#' + anchorId) : '');
+    window.location.href = (map[pageId] || '/') + (anchorId ? ('#' + anchorId) : '');
   }
 
   const observer = new IntersectionObserver(entries => {
