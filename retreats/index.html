@@ -456,9 +456,10 @@
     border:1px solid rgba(255,255,255,0.15); pointer-events:none;
   }
   .room-thumbs {
-    display:grid; grid-template-columns:repeat(3,1fr); gap:6px;
+    display:flex; gap:6px; overflow-x:auto; scrollbar-width:thin;
   }
   .room-thumb {
+    flex: 0 0 calc((100% - 18px) / 4);
     aspect-ratio:4/3; overflow:hidden; cursor:pointer;
     opacity:0.6; transition:opacity 0.25s, transform 0.25s;
     outline:2px solid transparent; outline-offset:0;
@@ -635,7 +636,7 @@
     .gallery-grid{padding:0 1.5rem 3rem; grid-auto-rows:220px;}
     .form-row{grid-template-columns:1fr;}
     .values-grid,.about-stats{grid-template-columns:1fr 1fr;}
-    .rooms-preview-grid{grid-template-columns:1fr 1fr;} .room-thumbs{grid-template-columns:repeat(3,1fr);}
+    .rooms-preview-grid{grid-template-columns:1fr 1fr;}
   }
   @media(max-width:560px){
     .rooms-preview-grid{grid-template-columns:1fr;}
@@ -733,22 +734,21 @@
 /* ===== RETREATS THUMBNAILS FIX ===== */
 .room-thumbs {
   display: flex;
-  gap: 8px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 
 .room-thumb {
-  width: 50%;
-  max-width: 80px;
+  flex: 0 0 calc((100% - 18px) / 4);
   aspect-ratio: 4 / 3;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 4px;
   opacity: 0.7;
   transition: 0.2s ease;
   background: #ddd;
-  flex: 0 0 auto;
 }
 
 .room-thumb img {
@@ -1251,10 +1251,10 @@ a {
       if (galleryImages.length) setGalleryMain(0);
     }
 
-    populateRoomGallery('r1', '../images/orchards-nook', "Orchards Nook Treehouse", 12);
-    populateRoomGallery('r2', '../images/cosy-hide', "The Cosy Hide", 12);
-    populateRoomGallery('r3', '../images/cosy-cottage-camb', "Cambridgeshire Cosy Cottage", 12);
-    populateRoomGallery('r4', '../images/cosy-cottage-kent', "Kent Cosy Cottage", 12);
+    populateRoomGallery('r1', '../images/orchards-nook', "Orchards Nook Treehouse", 30);
+    populateRoomGallery('r2', '../images/cosy-hide', "The Cosy Hide", 30);
+    populateRoomGallery('r3', '../images/cosy-cottage-camb', "Cambridgeshire Cosy Cottage", 30);
+    populateRoomGallery('r4', '../images/cosy-cottage-kent', "Kent Cosy Cottage", 30);
   });
 
   function setGalleryMain(idx) {
