@@ -1124,14 +1124,14 @@ a {
 
   (function buildGallery() {
     var prefixes = [
-      { p: '../images/orchards-nook', label: "Orchard's Nook" },
-      { p: '../images/cosy-hide', label: 'The Cosy Hide' },
-      { p: '../images/cosy-cottage-camb', label: 'Cambridgeshire Cottage' },
-      { p: '../images/cosy-cottage-kent', label: 'Kent Cottage' }
+      { p: '../images/orchards-nook', label: "Orchard's Nook", count: 5 },
+      { p: '../images/cosy-hide', label: 'The Cosy Hide', count: 4 },
+      { p: '../images/cosy-cottage-camb', label: 'Cambridgeshire Cottage', count: 7 },
+      { p: '../images/cosy-cottage-kent', label: 'Kent Cottage', count: 3 }
     ];
     prefixes.forEach(function(r) {
       galleryImages.push({ src: r.p + '/main.jpg', label: r.label });
-      for (var i = 1; i <= 5; i++) {
+      for (var i = 1; i <= r.count; i++) {
         galleryImages.push({ src: r.p + '/' + i + '.jpg', label: r.label });
       }
     });
