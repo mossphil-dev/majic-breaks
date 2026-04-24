@@ -459,7 +459,6 @@
     display:flex; gap:6px; overflow-x:auto; scrollbar-width:thin;
   }
   .room-thumb {
-    flex: 0 0 calc((100% - 18px) / 4);
     aspect-ratio:4/3; overflow:hidden; cursor:pointer;
     opacity:0.6; transition:opacity 0.25s, transform 0.25s;
     outline:2px solid transparent; outline-offset:0;
@@ -741,7 +740,6 @@
 }
 
 .room-thumb {
-  flex: 0 0 calc((100% - 18px) / 4);
   aspect-ratio: 4 / 3;
   cursor: pointer;
   overflow: hidden;
@@ -981,7 +979,7 @@ a {
 <div class="room-img-main" id="r1-main" onclick="roomLightbox(this.querySelector('img').src,'Orchards Nook Treehouse')">
 <img alt="Orchards Nook Treehouse" src="../images/orchards-nook/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
 </div>
-<div class="room-thumbs-wrap"><button class="thumb-arrow thumb-arrow-left hidden" onclick="scrollThumbs('r1-thumbs',-1)">&#8249;</button><div class="room-thumbs" id="r1-thumbs"></div><button class="thumb-arrow thumb-arrow-right" onclick="scrollThumbs('r1-thumbs',1)">&#8250;</button></div>
+<div class="room-thumbs" id="r1-thumbs"></div>
 </div>
 <div>
 <p class="r-label">Treehouse · Sleeps 2 · Cottenham, Cambridgeshire</p>
@@ -1010,7 +1008,7 @@ a {
 <div class="room-img-main" id="r2-main" onclick="roomLightbox(this.querySelector('img').src,'The Cosy Hide')">
 <img alt="The Cosy Hide" src="../images/cosy-hide/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
 </div>
-<div class="room-thumbs-wrap"><button class="thumb-arrow thumb-arrow-left hidden" onclick="scrollThumbs('r2-thumbs',-1)">&#8249;</button><div class="room-thumbs" id="r2-thumbs"></div><button class="thumb-arrow thumb-arrow-right" onclick="scrollThumbs('r2-thumbs',1)">&#8250;</button></div>
+<div class="room-thumbs" id="r2-thumbs"></div>
 </div>
 <div>
 <p class="r-label">Barn Retreat · Sleeps 2 · Cottenham, Cambridgeshire</p>
@@ -1037,7 +1035,7 @@ a {
 <div class="room-img-main" id="r3-main" onclick="roomLightbox(this.querySelector('img').src,'Cambridgeshire Cosy Cottage')">
 <img alt="Cambridgeshire Cosy Cottage" src="../images/cosy-cottage-camb/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
 </div>
-<div class="room-thumbs-wrap"><button class="thumb-arrow thumb-arrow-left hidden" onclick="scrollThumbs('r3-thumbs',-1)">&#8249;</button><div class="room-thumbs" id="r3-thumbs"></div><button class="thumb-arrow thumb-arrow-right" onclick="scrollThumbs('r3-thumbs',1)">&#8250;</button></div>
+<div class="room-thumbs" id="r3-thumbs"></div>
 </div>
 <div>
 <p class="r-label">Cottage · Sleeps 4 · Cottenham, Cambridgeshire</p>
@@ -1066,7 +1064,7 @@ a {
 <div class="room-img-main" id="r4-main" onclick="roomLightbox(this.querySelector('img').src,'Kent Cosy Cottage')">
 <img alt="Kent Cosy Cottage" src="../images/cosy-cottage-kent/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/>
 </div>
-<div class="room-thumbs-wrap"><button class="thumb-arrow thumb-arrow-left hidden" onclick="scrollThumbs('r4-thumbs',-1)">&#8249;</button><div class="room-thumbs" id="r4-thumbs"></div><button class="thumb-arrow thumb-arrow-right" onclick="scrollThumbs('r4-thumbs',1)">&#8250;</button></div>
+<div class="room-thumbs" id="r4-thumbs"></div>
 </div>
 <div>
 <p class="r-label">Cottage · Sleeps 4 · Barham, Kent</p>
@@ -1175,23 +1173,6 @@ a {
     });
   }
 
-  function scrollThumbs(thumbsId, dir) {
-    var el = document.getElementById(thumbsId);
-    if (!el) return;
-    var thumbW = el.firstElementChild ? el.firstElementChild.offsetWidth + 6 : 100;
-    el.scrollBy({ left: dir * thumbW * 4, behavior: 'smooth' });
-    setTimeout(function() { updateThumbArrows(el); }, 350);
-  }
-
-  function updateThumbArrows(el) {
-    var wrap = el.parentElement;
-    if (!wrap) return;
-    var leftBtn  = wrap.querySelector('.thumb-arrow-left');
-    var rightBtn = wrap.querySelector('.thumb-arrow-right');
-    if (leftBtn)  leftBtn.classList.toggle('hidden', el.scrollLeft <= 0);
-    if (rightBtn) rightBtn.classList.toggle('hidden', el.scrollLeft + el.clientWidth >= el.scrollWidth - 2);
-  }
-
     function populateRoomGallery(rid, folder, altText, maxImages) {
     var mainEl = document.getElementById(rid + '-main');
     var thumbsEl = document.getElementById(rid + '-thumbs');
@@ -1225,10 +1206,6 @@ a {
     });
 
     mainEl.innerHTML = '<img src="' + folder + '/main.jpg" alt="' + altText + '" style="width:100%;height:100%;object-fit:cover;display:block;">';
-    var wrap = thumbsEl.parentElement;
-    if (wrap) {
-      thumbsEl.addEventListener('scroll', function() { updateThumbArrows(thumbsEl); });
-    }
   }
 
   var currentGalleryIndex = 0;
