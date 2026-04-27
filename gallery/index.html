@@ -1083,14 +1083,14 @@ a {
     });
   }
 
-  function populateRoomGallery(rid, folder, altText, maxImages) {
+  function populateRoomGallery(rid, folder, altText, nums) {
     var mainEl = document.getElementById(rid + '-main');
     var thumbsEl = document.getElementById(rid + '-thumbs');
     if (!mainEl || !thumbsEl) return;
     thumbsEl.innerHTML = '';
 
     var files = ['main.jpg'];
-    for (var i = 1; i <= (maxImages || 12); i++) files.push(i + '.jpg');
+    nums.forEach(function(n) { files.push(n + '.jpg'); });
 
     files.forEach(function(file, idx) {
       var src = folder + '/' + file;
@@ -1123,16 +1123,16 @@ a {
 
   (function buildGallery() {
     var prefixes = [
-      { p: '../images/orchards-nook', label: "Orchard's Nook", count: 37 },
-      { p: '../images/cosy-hide', label: 'The Cosy Hide', count: 15 },
-      { p: '../images/cosy-cottage-camb', label: 'Cambridgeshire Cottage', count: 7 },
-      { p: '../images/cosy-cottage-kent', label: 'Kent Cottage', count: 3 }
+      { p: '../images/orchards-nook', label: "Orchard's Nook", nums: [4,5,7,10,11,12,13,15,18,22,23,27,28,29,30,31,34,35,37,38,39,40,41] },
+      { p: '../images/cosy-hide', label: 'The Cosy Hide', nums: [1,2,3,4,5,6,7,8,9,10,11,12,14,15] },
+      { p: '../images/cosy-cottage-camb', label: 'Cambridgeshire Cottage', nums: [1,2,3,4,5] },
+      { p: '../images/cosy-cottage-kent', label: 'Kent Cottage', nums: [1,2,3] }
     ];
     prefixes.forEach(function(r) {
       galleryImages.push({ src: r.p + '/main.jpg', label: r.label });
-      for (var i = 1; i <= r.count; i++) {
-        galleryImages.push({ src: r.p + '/' + i + '.jpg', label: r.label });
-      }
+      r.nums.forEach(function(n) {
+        galleryImages.push({ src: r.p + '/' + n + '.jpg', label: r.label });
+      });
     });
   })();
 
@@ -1159,10 +1159,10 @@ a {
       if (galleryImages.length) setGalleryMain(0);
     }
 
-    populateRoomGallery('r1', '../images/orchards-nook', "Orchards Nook Treehouse", 12);
-    populateRoomGallery('r2', '../images/cosy-hide', "The Cosy Hide", 12);
-    populateRoomGallery('r3', '../images/cosy-cottage-camb', "Cambridgeshire Cosy Cottage", 12);
-    populateRoomGallery('r4', '../images/cosy-cottage-kent', "Kent Cosy Cottage", 12);
+    populateRoomGallery('r1', '../images/orchards-nook', "Orchards Nook Treehouse", [4,5,7,10,11,12,13,15,18,22,23,27,28,29,30,31,34,35,37,38,39,40,41]);
+    populateRoomGallery('r2', '../images/cosy-hide', "The Cosy Hide", [1,2,3,4,5,6,7,8,9,10,11,12,14,15]);
+    populateRoomGallery('r3', '../images/cosy-cottage-camb', "Cambridgeshire Cosy Cottage", [1,2,3,4,5]);
+    populateRoomGallery('r4', '../images/cosy-cottage-kent', "Kent Cosy Cottage", [1,2,3]);
   });
 
   function setGalleryMain(idx) {
