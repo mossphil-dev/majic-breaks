@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Majic Breaks — Romantic, Rural Retreats in Cambridgeshire</title>
-<meta name="description" content="Escape to handpicked romantic retreats in the English countryside. From a treehouse in a Cambridgeshire orchard to a barn with sunset views — book your perfect getaway."/>
+<title>Majic Breaks — Romantic, Rural Retreats in Cambridgeshire &amp; Kent</title>
+<meta name="description" content="Escape to handpicked romantic retreats in the English countryside. From a treehouse in a Cambridgeshire orchard to a cottage in the Kent hills — book your perfect getaway."/>
 <link rel="icon" type="image/png" href="images/logo.png">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Jost:wght@300;400&amp;display=swap" rel="stylesheet"/>
@@ -986,7 +986,7 @@ a {
 <p class="hero-eyebrow">Romantic · Rural · Retreats</p>
 <h1 class="hero-title"><em>Majic</em><br/>Breaks</h1>
 <p class="hero-tagline-line">Where love finds its quiet place</p>
-<p class="hero-sub">From a treehouse above an orchard to a barn with breathtaking sunset views — our own rural escapes, built and loved for couples who want to truly get away.</p>
+<p class="hero-sub">From a treehouse above an orchard to a cottage in the Kent hills — our own rural escapes, built and loved for couples who want to truly get away.</p>
 <div class="hero-cta">
 <a class="btn-primary" href="/retreats/">View Our Retreats</a>
 <a class="btn-outline-light" href="/contact/">Plan a Break</a>
@@ -1017,7 +1017,7 @@ a {
 </div>
 <section class="rooms-preview">
 <p class="section-label">Our Retreats</p>
-<h2 class="section-title">Three Places,<br/>One Purpose</h2>
+<h2 class="section-title">Four Places,<br/>One Purpose</h2>
 <p class="section-body">Each Majic Breaks property is owned, prepared, and personally cared for by us. Different settings, different experiences — all created to give you real time together.</p>
 <div class="rooms-preview-grid">
 <div class="room-preview-card animate" onclick="showPageAndScroll('rooms','room-orchards-nook')">
@@ -1050,6 +1050,16 @@ a {
 <div class="rpc-price">From £130 <span>per night</span></div>
 </div>
 </div>
+<div class="room-preview-card animate" onclick="showPageAndScroll('rooms','room-kent-cottage')">
+<div class="rpc-visual"><div class="rpc-visual-inner" style="background:linear-gradient(145deg,#6b9e8a,#3d6e5a)"><img alt="Kent Cosy Cottage" src="images/cosy-cottage-kent/main.jpg" style="width:100%;height:100%;object-fit:cover;display:block;"/></div></div>
+<div class="rpc-body">
+<div class="rpc-location">Barham, Kent</div>
+<div class="rpc-name">Kent Cosy Cottage</div>
+<div class="rpc-desc">A beautiful cottage in an Area of Outstanding Natural Beauty — open fire, balcony sunrises, and Canterbury just 7 miles away.</div>
+<div class="rpc-tags"><span class="rpc-tag">Sleeps 4</span><span class="rpc-tag">Open Fire</span><span class="rpc-tag">Outstanding Natural Beauty</span></div>
+<div class="rpc-price">From £135 <span>per night</span></div>
+</div>
+</div>
 </div>
 </section>
 <div class="promise">
@@ -1080,7 +1090,7 @@ a {
 </div>
 <div class="test-card animate">
 <div class="test-stars">★★★★★</div>
-<p class="test-q">"The Cosy Hide was absolutely magical. Fire pit under the stars, sunset views across open countryside — we didn't want to leave."</p>
+<p class="test-q">"We stayed at the Kent Cosy Cottage for our anniversary. Waking up to those countryside views with a coffee by the open fire — perfect."</p>
 <span class="test-author">— Laura &amp; Marcus, London</span>
 </div>
 <div class="test-card animate">
@@ -1114,7 +1124,7 @@ a {
 <h4>Get In Touch</h4>
 <ul>
 <li><a class="email-link" href="mailto:majicbreaksltd@hotmail.com">majicbreaksltd@hotmail.com</a></li>
-<li><a>Cambridgeshire</a></li>
+<li><a>Cambridgeshire &amp; Kent</a></li>
 </ul>
 </div>
 </div>
@@ -1216,7 +1226,8 @@ a {
     var prefixes = [
       { p: 'images/orchards-nook', label: "Orchard's Nook" },
       { p: 'images/cosy-hide', label: 'The Cosy Hide' },
-      { p: 'images/cosy-cottage-camb', label: 'Cambridgeshire Cottage' }
+      { p: 'images/cosy-cottage-camb', label: 'Cambridgeshire Cottage' },
+      { p: 'images/cosy-cottage-kent', label: 'Kent Cottage' }
     ];
     prefixes.forEach(function(r) {
       galleryImages.push({ src: r.p + '/main.jpg', label: r.label });
@@ -1252,6 +1263,7 @@ a {
     populateRoomGallery('r1', 'images/orchards-nook', "Orchards Nook Treehouse", 12);
     populateRoomGallery('r2', 'images/cosy-hide', "The Cosy Hide", 12);
     populateRoomGallery('r3', 'images/cosy-cottage-camb', "Cambridgeshire Cosy Cottage", 12);
+    populateRoomGallery('r4', 'images/cosy-cottage-kent', "Kent Cosy Cottage", 12);
   });
 
   function setGalleryMain(idx) {
